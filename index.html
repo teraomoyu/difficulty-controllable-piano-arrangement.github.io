@@ -29,256 +29,211 @@
 	<div class="p-5">
 		<h1>Piano Arrangement Demo Page</h1>
 		<span>
-			This is the demo page for "Difficulty-Aware Neural Band-to-Piano Score Arrangement Based on Note- and Statistic-Level Criteria" in ICASSP2022.<br>
-			For copyright reasons, we do not show the collected scores.<br>
+			This is the demo page for "Neural Band-to-Piano Score Arrangement with Stepless Difficulty Control" in ICASSP2023.<br>
+			<!-- For copyright reasons, we do not show the collected scores.<br> -->
 		</span>
 	</div>
-	<!-- <div class="row px-5">
-		<div class="card">
-			<div class="card-body">
-				<h5 class="card-title">Ground Truth Histogram</h5>
-				<iframe src="./images/icassp_gt.pdf" width="500" height="500"></iframe><br>
-			</div>
-		</div>
-	</div> -->
-
 	<div class="row px-5">
-		<!-- <div class="col-sm-6"> -->
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Example 1 </h5>
-				<!-- <img src="./images/X55692G23_3222.png" class="img-X55692G23_3222" alt="du" title="prediction result (elementary level)"> -->
-				<div class="p-3">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Loss function</th>
-								<th scope="col">Result</th>
-								<!-- <th scope="col">Result (advanced level)</th> -->
-							</tr>
-						</thead>
-						<tbody class="align-middle">
-							<tr>
-								<th scope="row">1</th>
-								<td>Note-level loss only</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/X55692G23_3222.wav">
+					<ul>
+						<li>
+							<h6>Ground-truth</h6>
+							Elementary level<br>
+							<audio controls src="./media/icassp23_54240_demo_gt.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/X55692G23_3222.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/X55692G24_3222.wav">
+							</audio><br>
+							<img src="./images/54240_gt.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Input band score</h6>
+							<audio controls src="./media/icassp23_54240_demo_band.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/X55692G24_3222.png" width="1000"></img><br>
-								<iframe src="./images/icassp_X55692G_nt.pdf" width="1000" height="570"></iframe><br>
-							  	</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Note- and statistic-level losses</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/X55692G23_4801.wav">
+							</audio>
+							<img src="./images/54240_band.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Estimated piano score</h6>
+							&gamma;=0<br>
+							<audio controls src="./media/icassp23_54240_demo_0.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/X55692G23_4801.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/X55692G24_4801.wav">
+							</audio>
+							<img src="./images/54240_0.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.25<br>
+							<audio controls src="./media/icassp23_54240_demo_025.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/X55692G24_4801.png" width="1000"></img><br>
-								<iframe src="./images/icassp_X55692G.pdf" width="1000" height="570"></iframe><br>
-							  	</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+							</audio>
+							<img src="./images/54240_025.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.5<br>
+							<audio controls src="./media/icassp23_54240_demo_05.wav">
+								Your browser does not support the
+								<code>audio</code> element.
+							</audio>
+							<img src="./images/54240_05.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.75<br>
+							<audio controls src="./media/icassp23_54240_demo_075.wav">
+								Your browser does not support the
+								<code>audio</code> element.
+							</audio>
+							<img src="./images/54240_075.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=1<br>
+							<audio controls src="./media/icassp23_54240_demo_1.wav">
+								Your browser does not support the
+								<code>audio</code> element.
+							</audio>
+							<img src="./images/54240_1.svg" class="img-54240" width="100%" alt="du" title="prediction result (elementary level)">
+						</li>
+					</ul>
 			</div>
-			<!-- </div> -->
 		</div>
 	</div>
 	<div class="row px-5">
-		<!-- <div class="col-sm-6"> -->
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Example 2 </h5>
-				<!-- <img src="./images/X55692G23_3222.png" class="img-X55692G23_3222.png" alt="du" title="prediction result (elementary level)"> -->
-				<div class="p-3">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Loss function</th>
-								<th scope="col">Result</th>
-							</tr>
-						</thead>
-						<tbody class="align-middle">
-							<tr>
-								<th scope="row">1</th>
-								<td>ground-truth<br>
-								<td>Elementary level<br>
-								<audio controls src="./media/R00314G2.wav">
+					<ul>
+						<li>
+							<h6>Ground-truth</h6>
+							Elementary level<br>
+							<audio controls src="./media/icassp23_53344_demo_gt.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図1.png" width="500"></img><br>								
-								</td>
-							<tr>
-								<th scope="row">2</th>
-								<td>Note-level loss only</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/sigmus_e_majorR00314G23.wav">
+							</audio><br>
+							<img src="./images/53344_gt.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Input band score</h6>
+							<audio controls src="./media/icassp23_53344_demo_band.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図2.png" width="500"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/sigmus_e_majorR00314G24.wav">
+							</audio>
+							<img src="./images/53344_band.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Estimated piano score</h6>
+							&gamma;=0<br>
+							<audio controls src="./media/icassp23_53344_demo_0.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図4.png" width="500"></img><br>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Note- and statistic-level losses</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/majorR00314G23.wav">
+							</audio>
+							<img src="./images/53344_0.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.25<br>
+							<audio controls src="./media/icassp23_53344_demo_025.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図3.png" width="500"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/majorR00314G24.wav">
+							</audio>
+							<img src="./images/53344_025.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.5<br>
+							<audio controls src="./media/icassp23_53344_demo_05.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図5.png" width="500"></img><br>
-							  	</td>
-							</tr>
-						</tbody>
-					</table>
-					<!-- <table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Loss function</th>
-								<th scope="col">Result</th>
-							</tr>
-						</thead>
-						<tbody class="align-middle">
-							<tr>
-								<th scope="row">1</th>
-								<td>Note-level loss only</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/R01163G23_3222.wav">
+							</audio>
+							<img src="./images/53344_05.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.75<br>
+							<audio controls src="./media/icassp23_53344_demo_075.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/R01163G23_3222.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/R01163G24_3222.wav">
+							</audio>
+							<img src="./images/53344_075.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=1<br>
+							<audio controls src="./media/icassp23_53344_demo_1.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/R01163G24_3222.png" width="1000"></img><br>
-								<iframe src="./images/icassp_R01163G_nt.pdf" width="1000" height="570"></iframe><br>
-							</td>
-						</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Note- and statistic-level losses</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/R01163G23_4801.wav">
-								Your browser does not support the
-								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/R01163G23_4801.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/R01163G24_4801.wav">
-								Your browser does not support the
-								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/R01163G24_4801.png" width="1000"></img><br>
-								<iframe src="./images/icassp_R01163G.pdf" width="1000" height="570"></frame><br>
-							  	</td>
-							</tr>
-						</tbody>
-					</table> -->
-				</div>
+							</audio>
+							<img src="./images/53344_1.svg" class="img-53344" width="100%" alt="du" title="prediction result (elementary level)">
+						</li>
+					</ul>
 			</div>
 		</div>
 	</div>
-	<!-- <div class="row px-5">
+	<div class="row px-5">
 		<div class="card">
 			<div class="card-body">
 				<h5 class="card-title">Example 3 </h5>
-				<div class="p-3">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Loss function</th>
-								<th scope="col">Result</th>
-							</tr>
-						</thead>
-						<tbody class="align-middle">
-							<tr>
-								<th scope="row">1</th>
-								<td>Note-level loss only</td>
-								<td>ground-truth<br>
-								<audio controls src="./media/R00314G2.wav">
+					<ul>
+						<li>
+							<h6>Ground-truth</h6>
+							Elementary level<br>
+							<audio controls src="./media/icassp23_54666_demo_gt.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図1.png" width="1000"></img><br>								
-								</td>
-							<tr>
-								<th scope="row">1</th>
-								<td>Note-level loss only</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/sigmus_e_majorR00314G23.wav">
+							</audio><br>
+							<img src="./images/54666_gt.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Input band score</h6>
+							<audio controls src="./media/icassp23_54666_demo_band.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図2.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/sigmus_e_majorR00314G24.wav">
+							</audio>
+							<img src="./images/54666_band.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+						</li><br>
+						<li>
+							<h6>Estimated piano score</h6>
+							&gamma;=0<br>
+							<audio controls src="./media/icassp23_54666_demo_0.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図4.png" width="1000"></img><br>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Note- and statistic-level losses</td>
-								<td>Elementary level<br>
-								<audio controls src="./media/majorR00314G23.wav">
+							</audio>
+							<img src="./images/54666_0.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.25<br>
+							<audio controls src="./media/icassp23_54666_demo_025.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図３.png" width="1000"></img><br>
-								Advanced level<br>
-								<audio controls src="./media/majorR00314G24.wav">
+							</audio>
+							<img src="./images/54666_025.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.5<br>
+							<audio controls src="./media/icassp23_54666_demo_05.wav">
 								Your browser does not support the
 								<code>audio</code> element.
-								</audio><br>
-								<img src="./images/図5.png" width="1000"></img><br>
-							  	</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+							</audio>
+							<img src="./images/54666_05.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=0.75<br>
+							<audio controls src="./media/icassp23_54666_demo_075.wav">
+								Your browser does not support the
+								<code>audio</code> element.
+							</audio>
+							<img src="./images/54666_075.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+							<br>
+							<br>
+							&gamma;=1<br>
+							<audio controls src="./media/icassp23_54666_demo_1.wav">
+								Your browser does not support the
+								<code>audio</code> element.
+							</audio>
+							<img src="./images/54666_1.svg" class="img-54666" width="100%" alt="du" title="prediction result (elementary level)">
+						</li>
+					</ul>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </main>
 </body>
 </html>
